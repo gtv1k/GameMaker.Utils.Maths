@@ -26,3 +26,8 @@ function max()
 	return smallest;
 }
 
+//Returns -1 if input is negative, 0 if input is zero (or within the given threshold), 1 if input is positive.
+function sign_with_zero(input, threshold = 0.00001)
+{
+	return (abs(value) < threshold) ? 0 : sign(value);
+}
