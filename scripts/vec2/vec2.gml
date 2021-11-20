@@ -3,6 +3,28 @@ function vec2(x = 0, y = 0) constructor
     self.x = x;
 	self.y = y;
 	
+
+	#region Swizzles
+	
+	static xy=function()
+	{
+		return new vec2(x, y);
+	}
+	static yx=function()
+	{
+		return new vec2(y, x);
+	}
+	static xx=function()
+	{
+		return new vec2(x, x);
+	}
+	static yy=function()
+	{
+		return new vec2(y, y);
+	}
+	
+	#endregion
+	
 	#region Operators
 	
 	#region Arithmetic
