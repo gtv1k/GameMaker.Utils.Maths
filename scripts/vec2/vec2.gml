@@ -102,6 +102,13 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
+	
+	//Negation
+	static __neg__=function()
+	{
+		return new vec2(-self.x, -self.y);
+	}
+	
 	#endregion
 }
 
