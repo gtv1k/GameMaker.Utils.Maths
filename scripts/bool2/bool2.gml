@@ -43,6 +43,14 @@ function bool2(x = false, y = false) constructor
 		return result;
 	}
 	
+	
+	//Component-wise NOT operation
+	static __not__=function()
+	{
+		return new bool2(!self.x, !self.y);
+	}
+	
+	
 	#endregion
 	
 	#region Methods
