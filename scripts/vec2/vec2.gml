@@ -5,6 +5,7 @@ function vec2(x = 0, y = 0) constructor
 	
 	#region Operators
 	
+	//Multiplication
 	static __mul__=function(input)
 	{
 		var result = new vec2();
@@ -23,6 +24,7 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
+	//Division
 	static __div__=function(input)
 	{
 		var result = new vec2();
@@ -42,6 +44,7 @@ function vec2(x = 0, y = 0) constructor
 	}
 	
 	
+	//Addition
 	static __add__=function(input)
 	{
 		var result = new vec2();
@@ -60,6 +63,7 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
+	//Subtraction
 	static __sub__=function(input)
 	{
 		var result = new vec2();
@@ -73,6 +77,26 @@ function vec2(x = 0, y = 0) constructor
 		{	
 			result.x = self.x - input;
 			result.y = self.y - input;
+		}
+	
+		return result;
+	}
+	
+	
+	//Remainder
+	static __mod__=function(input)
+	{
+		var result = new vec2();
+		
+		if is_struct(input) //is vec2
+		{
+			result.x = self.x % input.x;
+			result.y = self.y % input.y;
+		}
+		else //is number
+		{	
+			result.x = self.x % input;
+			result.y = self.y % input;
 		}
 	
 		return result;
