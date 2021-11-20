@@ -11,3 +11,18 @@ function min()
 	}
 	return smallest;
 }
+
+//Returns the largest value from its inputs.
+function max()
+{
+	var smallest = argument[0];
+	for (var i = 1; i < argument_count; i += 1) 
+	{
+		if(argument[i] < smallest)
+		{
+			smallest = list[i];
+		}
+	}
+	return smallest;
+}
+
