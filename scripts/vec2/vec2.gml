@@ -89,3 +89,15 @@ function vec2(x = 0, y = 0) constructor
 #macro direction vec2
 
 #endregion
+
+#region Defaults
+
+#macro vec2_zero new vec2(0, 0);
+#macro vec2_one  new vec2(1, 1);
+
+#macro vec2_up    new vec2(0,  1);
+#macro vec2_down  new vec2(0, -1);
+#macro vec2_left  new vec2(-1, 0);
+#macro vec2_right new vec2( 1, 0);
+
+#endregion
