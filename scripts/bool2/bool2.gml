@@ -53,7 +53,13 @@ function bool2(x = false, y = false) constructor
 	
 	#endregion
 	
-	#region Methods
+	#region Functions
+	
+	//Returns true if any component is true, false otherwise.
+	static any=function()
+	{
+		return (self.x || self.y);
+	}
 	
 	#endregion
 }
