@@ -185,6 +185,26 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
+	
+	//Is Less Than Or Equal
+	static __le__=function(input)
+	{
+		var result = new bool2();
+		
+		if is_struct(input) //is vec2
+		{
+			result.x = (self.x <= input.x);
+			result.y = (self.y <= input.y);
+		}
+		else //is number (or bool??)
+		{	
+			result.x = (self.x <= input);
+			result.y = (self.y <= input);
+		}
+	
+		return result;
+	}
+	
 	#endregion
 	
 	#endregion
