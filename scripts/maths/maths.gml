@@ -31,3 +31,9 @@ function sign_with_zero(input, threshold = 0.00001)
 {
 	return (abs(value) < threshold) ? 0 : sign(value);
 }
+
+//Returns blended value between `from` and `to` based on `amount`.
+function lerp_unclamped(from, to, amount) //I know there already is a clamp, but this is more explicit.
+{
+	return ((1 - amount) * from) + (amount * to);
+}
