@@ -61,5 +61,11 @@ function bool2(x = false, y = false) constructor
 		return (self.x || self.y);
 	}
 	
+	//Returns true if all components are true, false otherwise.
+	static all=function()
+	{
+		return (self.x && self.y);
+	}
+	
 	#endregion
 }
