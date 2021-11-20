@@ -37,3 +37,10 @@ function lerp_unclamped(from, to, amount) //I know there already is a clamp, but
 {
 	return ((1 - amount) * from) + (amount * to);
 }
+
+//Returns blended value between `from` and `to` based on `amount`. 
+//`amount` is clamped between [0-1] so it never goes out of bounds.
+function lerp_clamped(from, to, amount) //Unlike Unity's lerp the one this engine has isn't clamped, i like having it as an option.
+{
+	return lerp_unclamped(from, to, clamp(amount, 0, 1));
+}
