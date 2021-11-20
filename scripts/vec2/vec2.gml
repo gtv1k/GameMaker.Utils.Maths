@@ -80,3 +80,12 @@ function vec2(x = 0, y = 0) constructor
 	
 	#endregion
 }
+
+#region Aliases
+
+#macro vector2 vec2
+#macro vector vec2
+#macro position vec2
+#macro direction vec2
+
+#endregion
