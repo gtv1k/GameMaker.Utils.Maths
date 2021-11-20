@@ -50,19 +50,18 @@ function bool2(x = false, y = false) constructor
 		return new bool2(!self.x, !self.y);
 	}
 	
-	
 	#endregion
 	
 	#region Functions
 	
 	//Returns true if any component is true, false otherwise.
-	static any=function()
+	static _any=function()
 	{
 		return (self.x || self.y);
 	}
 	
 	//Returns true if all components are true, false otherwise.
-	static all=function()
+	static _all=function()
 	{
 		return (self.x && self.y);
 	}
