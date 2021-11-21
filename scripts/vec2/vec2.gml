@@ -172,6 +172,13 @@ function vec2(x = 0, y = 0) constructor
 	}
 	
 	
+	//Compound Remainder
+	//Same result as `value = value.__mod__(input);`
+	static __c_mod__=function(input)
+	{
+		return self = self.__mod__(input);
+	}
+	
 	#endregion
 	
 	#region Comparison
