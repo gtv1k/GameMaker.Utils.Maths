@@ -187,6 +187,13 @@ function vec2(x = 0, y = 0) constructor
 		return self = self.__neg__();
 	}
 	
+	//Compound Absolute Value.
+	//Same result as `value = value._abs();`
+	static _c_abs=function()
+	{
+		return new vec2(abs(self.x), abs(self.y));
+	}
+	
 	#endregion
 	
 	#region Comparison
