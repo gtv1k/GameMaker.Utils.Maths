@@ -3,7 +3,6 @@ function vec2(x = 0, y = 0) constructor
     self.x = x;
 	self.y = y;
 	
-
 	#region Swizzles
 	
 	static xy=function()
@@ -208,7 +207,7 @@ function vec2(x = 0, y = 0) constructor
 	}
 	
 	
-	//Is Less Than Or Equal
+	//Is Less Than Or Equal To
 	static __le__=function(input)
 	{
 		var result = new bool2();
@@ -227,7 +226,7 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
-	//Is Greather Than Or Equal
+	//Is Greather Than Or Equal To
 	static __ge__=function(input)
 	{
 		var result = new bool2();
@@ -267,14 +266,40 @@ function vec2(x = 0, y = 0) constructor
 
 #region Aliases
 
-#macro vector2 vec2
-#macro vector vec2
-#macro position vec2
+#macro vector2   vec2
+#macro vector    vec2
+#macro position  vec2
 #macro direction vec2
+
+#region	Operators/Functions
+
+#macro __equals__     __eq__;
+#macro __not_equals__ __ne__;
+	
+#macro __lt_or_eq__ __le__;
+#macro __gt_or_eq__ __ge__;
+	
+#macro __less_or_equals__    __le__;
+#macro __greater_or_equals__ __ge__;
+	
+#macro __less_than_or_equal_to__    __le__;
+#macro __greater_than_or_equal_to__ __ge__;
+
+#endregion
 
 #endregion
 
 #region Defaults
+
+//I couldn't figure out constants
+
+#macro zero new vec2(0, 0);
+#macro one  new vec2(1, 1);
+
+#macro up    new vec2(0,  1);
+#macro down  new vec2(0, -1);
+#macro left  new vec2(-1, 0);
+#macro right new vec2( 1, 0);
 
 #macro vec2_zero new vec2(0, 0);
 #macro vec2_one  new vec2(1, 1);
