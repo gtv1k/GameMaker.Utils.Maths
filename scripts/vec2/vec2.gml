@@ -140,6 +140,17 @@ function vec2(x = 0, y = 0) constructor
 	
 	#endregion
 	
+	#region Compound Arithmetic
+	
+	//Compound Multiplication
+	//Same result as `value = value.__mul__(input);`
+	static __c_mul__=function(input)
+	{
+		return self = self.__mul__(input);
+	}
+	
+	#endregion
+	
 	#region Comparison
 	
 	//Is Equal To
