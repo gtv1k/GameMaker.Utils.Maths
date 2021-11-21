@@ -148,6 +148,13 @@ function vec2(x = 0, y = 0) constructor
 	{
 		return self = self.__mul__(input);
 	}
+		
+	//Compound Division
+	//Same result as `value = value.__div__(input);`
+	static __c_div__=function(input)
+	{
+		return self = self.__div__(input);
+	}
 	
 	#endregion
 	
