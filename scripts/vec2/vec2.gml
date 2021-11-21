@@ -179,6 +179,14 @@ function vec2(x = 0, y = 0) constructor
 		return self = self.__mod__(input);
 	}
 	
+	
+	//Compound Negation
+	//Same result as `value = value._neg();`
+	static _c_neg=function()
+	{
+		return self = self.__neg__();
+	}
+	
 	#endregion
 	
 	#region Comparison
