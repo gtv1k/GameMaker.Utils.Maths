@@ -156,6 +156,14 @@ function vec2(x = 0, y = 0) constructor
 		return self = self.__div__(input);
 	}
 	
+		
+	//Compound Addition
+	//Same result as `value = value.__add__(input);`
+	static __c_add__=function(input)
+	{
+		return self = self.__add__(input);
+	}	
+	
 	#endregion
 	
 	#region Comparison
