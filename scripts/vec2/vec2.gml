@@ -162,7 +162,15 @@ function vec2(x = 0, y = 0) constructor
 	static __c_add__=function(input)
 	{
 		return self = self.__add__(input);
-	}	
+	}
+	
+	//Compound Subtraction
+	//Same result as `value = value.__sub__(input);`
+	static __c_sub__=function(input)
+	{
+		return self = self.__sub__(input);
+	}
+	
 	
 	#endregion
 	
