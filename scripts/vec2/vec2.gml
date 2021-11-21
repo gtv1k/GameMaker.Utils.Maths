@@ -125,6 +125,21 @@ function vec2(x = 0, y = 0) constructor
 		return result;
 	}
 	
+	
+	//Negation
+	static _neg=function()
+	{
+		return new vec2(-self.x, -self.y);
+	}
+	
+	//TODO: Absolute
+	/*
+	static _abs=function()
+	{
+		
+	}
+	*/
+	
 	#endregion
 	
 	#region Comparison
@@ -248,20 +263,6 @@ function vec2(x = 0, y = 0) constructor
 	#endregion
 	
 	#endregion
-	
-	//Negation
-	static __neg__=function()
-	{
-		return new vec2(-self.x, -self.y);
-	}
-	
-	//TODO: Absolute
-	/*
-	static __abs__=function()
-	{
-		
-	}
-	*/
 }
 
 #region Aliases
