@@ -132,13 +132,11 @@ function vec2(x = 0, y = 0) constructor
 		return new vec2(-self.x, -self.y);
 	}
 	
-	//TODO: Absolute
-	/*
+	//Absolute Value, makes every axis a positive number. -5 becomes 5, 4 stays 4
 	static _abs=function()
 	{
-		
+		return new vec2(abs(self.x), abs(self.y));
 	}
-	*/
 	
 	#endregion
 	
