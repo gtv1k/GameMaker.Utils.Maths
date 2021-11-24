@@ -57,4 +57,15 @@ function test_vec2_default_zero()
 	assertNotEqual(1, a.y);
 }
 
+function test_vec2_default_one()
+{
+	a = one;
+	
+	assertEqual(1, a.x);
+	assertEqual(1, a.y);
+	
+	assertNotEqual(0, a.x);
+	assertNotEqual(0, a.y);
+}
+
 #endregion
