@@ -244,6 +244,16 @@ function test_vec2_op_mod_number()
 	assertEqual(9, c.x);
 	assertEqual(9, c.y);
 }
+function test_vec2_op_mod_vec2()
+{
+	a = new vec2(69);
+	b = new vec2(5, 10);
+	
+	c = a.__mod__(b);
+	
+	assertEqual(4, c.x);
+	assertEqual(9, c.y);
+}
 
 #endregion
 
