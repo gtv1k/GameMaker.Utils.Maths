@@ -301,6 +301,17 @@ function test_vec2_op_eq_vec2()
 	assertFalse(c.y);
 }
 
+function test_vec2_op_ne_number()
+{
+	a = new vec2(69);
+	b = 69;
+	
+	c = a.__ne__(b);
+	
+	assertFalse(c.x);
+	assertFalse(c.y);
+}
+
 #endregion
 
 #endregion
