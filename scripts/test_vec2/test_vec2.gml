@@ -324,20 +324,19 @@ function test_vec2_op_ne_vec2()
 
 function test_vec2_op_lt_number()
 {
-	lhs = new vec2(69);
+	lhs = new vec2(1, 420);
 	
-	rhs_0 = 420;
-	rhs_1 = 1;
-	
+	rhs_0 = 69;
 	re_0 = lhs.__lt__(rhs_0);
 	
-	assertTrue(re_0.x);
-	assertTrue(re_0.y);
+	assertTrue(re_0.x);  //1 < 69
+	assertFalse(re_0.y); //420 < 69
 	
+	rhs_1 = 1;
 	re_1 = lhs.__lt__(rhs_1);
 	
-	assertFalse(re_1.x);
-	assertFalse(re_1.y);
+	assertFalse(re_1.x); //1 < 1
+	assertFalse(re_1.y); //420 < 1
 }
 function test_vec2_op_lt_vec2()
 {
@@ -378,6 +377,23 @@ function test_vec2_op_gt_vec2()
 	
 	assertTrue(re.x);
 	assertFalse(re.y);
+}
+
+function test_vec2_op_le_number()
+{
+	lhs = new vec2(1, 420);
+	
+	rhs_0 = 69;
+	re_0 = lhs.__le__(rhs_0);
+	
+	assertTrue(re_0.x);  //1 <= 69
+	assertFalse(re_0.y); //420 <= 69
+	
+	rhs_1 = 1;
+	re_1 = lhs.__le__(rhs_1);
+	
+	assertTrue(re_1.x);  //1 <= 1
+	assertFalse(re_1.y); //420 <= 1
 }
 
 #endregion
