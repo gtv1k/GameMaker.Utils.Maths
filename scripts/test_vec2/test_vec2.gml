@@ -182,6 +182,16 @@ function test_vec2_op_div_number()
 	assertEqual(0.1, c.y);
 }
 
+function test_vec2_op_div_vec2()
+{
+	a = one;
+	b = new vec2(5, 10);
+	
+	c = a.__div__(b);
+	
+	assertEqual(0.2, c.x);
+	assertEqual(0.1, c.y);
+}
 
 #endregion
 
