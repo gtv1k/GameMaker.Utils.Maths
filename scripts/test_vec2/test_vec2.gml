@@ -150,12 +150,23 @@ function test_vec2_swizzle_yy()
 
 function test_vec2_op_mul_number()
 {
-	a = up;
+	a = one;
 	b = 10;
 	
 	c = a.__mul__(b);
 	
-	assertEqual(0,  c.x);
+	assertEqual(10, c.x);
+	assertEqual(10, c.y);
+}
+
+function test_vec2_op_mul_vec2()
+{
+	a = one;
+	b = new vec2(5, 10);
+	
+	c = a.__mul__(b);
+	
+	assertEqual(5,  c.x);
 	assertEqual(10, c.y);
 }
 
