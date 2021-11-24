@@ -1,7 +1,34 @@
-function vec2(x = 0, y = 0) constructor
+function vec2(x = 0, y) constructor
 {
-    self.x = x;
-	self.y = y;
+	#region Constructor
+	
+	if(is_numeric(x) && is_numeric(y)) //(normal)
+	{
+		self.x = x;
+		self.y = y;
+		return;
+	}
+	else if is_undefined(y) //has 1 input
+	{
+		if is_struct(x) //is vec2 (other)
+		{
+			self.x = x.x;
+			self.y = x.y;
+			return;
+		}
+		else if is_numeric(x) //is number (scalar)
+		{
+			self.x = x;
+			self.y = x;
+			return;
+		}
+	}
+	
+	throw ("[ERROR] INVALID INPUT");
+	
+	//TODO: see if can throw error here instead?
+	
+	#endregion
 	
 	#region Swizzles
 	
