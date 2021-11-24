@@ -70,7 +70,6 @@ function test_vec2_default_down()
 	assertEqual(-1, a.y);
 }
 
-
 function test_vec2_default_left()
 {
 	a = left;
@@ -87,5 +86,21 @@ function test_vec2_default_right()
 	assertEqual(0, a.y);
 }
 
+#endregion
+
+#region Swizzles
+
+function test_vec2_swizzle_xy()
+{
+	a = up;
+	
+	assertEqual(0, a.x);
+	assertEqual(1, a.y);
+	
+	b = a.xy();
+	
+	assertEqual(0, b.x);
+	assertEqual(1, b.y);
+}
 
 #endregion

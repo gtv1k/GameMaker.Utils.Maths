@@ -32,6 +32,8 @@ function vec2(x = 0, y) constructor
 	
 	#region Swizzles
 	
+	//TODO: Swizzle variables
+	
 	static xy=function()
 	{
 		return new vec2(x, y);
