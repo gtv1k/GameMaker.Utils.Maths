@@ -1,9 +1,38 @@
-function vec2(x = 0, y = 0) constructor
+function vec2(x = 0, y) constructor
 {
-    self.x = x;
-	self.y = y;
+	#region Constructor
+	
+	if(is_numeric(x) && is_numeric(y)) //(normal)
+	{
+		self.x = x;
+		self.y = y;
+		return;
+	}
+	else if is_undefined(y) //has 1 input
+	{
+		if is_struct(x) //is vec2 (other)
+		{
+			self.x = x.x;
+			self.y = x.y;
+			return;
+		}
+		else if is_numeric(x) //is number (scalar)
+		{
+			self.x = x;
+			self.y = x;
+			return;
+		}
+	}
+	
+	throw ("[ERROR] INVALID INPUT");
+	
+	//TODO: see if can throw error here instead?
+	
+	#endregion
 	
 	#region Swizzles
+	
+	//TODO: Swizzle variables
 	
 	static xy=function()
 	{
@@ -148,7 +177,7 @@ function vec2(x = 0, y = 0) constructor
 	{
 		return self = self.__mul__(input);
 	}
-		
+	
 	//Compound Division
 	//Same result as `value = value.__div__(input);`
 	static __c_div__=function(input)
@@ -156,7 +185,7 @@ function vec2(x = 0, y = 0) constructor
 		return self = self.__div__(input);
 	}
 	
-		
+	
 	//Compound Addition
 	//Same result as `value = value.__add__(input);`
 	static __c_add__=function(input)
@@ -180,7 +209,7 @@ function vec2(x = 0, y = 0) constructor
 	}
 	
 	
-	//Compound Negation
+	//Compound Negation (kina bullshit, but why not)
 	//Same result as `value = value._neg();`
 	static _c_neg=function()
 	{

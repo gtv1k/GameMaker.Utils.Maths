@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Editor",
+    "path": "folders/GameMaker.Utils.Testing/Scripts/Editor.yy",
   },
   "resourceVersion": "1.0",
-  "name": "maths",
+  "name": "BaseTestClass",
   "tags": [],
   "resourceType": "GMScript",
 }

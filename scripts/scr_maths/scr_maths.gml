@@ -32,15 +32,31 @@ function sign_with_zero(input, threshold = 0.00001)
 	return (abs(value) < threshold) ? 0 : sign(value);
 }
 
+
 //Returns blended value between `from` and `to` based on `amount`.
 function lerp_unclamped(from, to, amount) //I know there already is a clamp, but this is more explicit.
 {
 	return ((1 - amount) * from) + (amount * to);
 }
 
-//Returns blended value between `from` and `to` based on `amount`. 
+//Returns blended `value` between `from` and `to` based on `amount`. 
 //`amount` is clamped between [0-1] so it never goes out of bounds.
 function lerp_clamped(from, to, amount) //Unlike Unity's lerp the one this engine has isn't clamped, i like having it as an option.
 {
 	return lerp_unclamped(from, to, clamp(amount, 0, 1));
 }
+
+//Returns `value`'s `amount` between `from` and `to`.
+function inverse_lerp_unclamped(from, to, value)
+{
+	return (value - from) / (to - from);
+}
+
+//Returns `value`'s `amount` between `from` and `to`. clampes between [0-1]
+function inverse_lerp_clamped(from, to, value)
+{
+	return clamp(inverse_lerp_unclamped(from, to, value), 0, 1);
+}
+
+//TODO: angle_to_dir
+//TODO: dir_to_angle
