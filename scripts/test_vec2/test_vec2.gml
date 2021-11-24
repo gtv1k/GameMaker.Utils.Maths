@@ -27,3 +27,15 @@ function test_vec2_constructor_empty()
 	assertNotEqual(69, a.x);
 	assertNotEqual(69, a.y);
 }
+
+function test_vec2_constructor_other() 
+{
+	a = new vec2(1, 2);
+	b = new vec2(a);
+	
+	assertEqual(a.x, b.x);
+	assertEqual(a.y, b.y);
+	
+	assertNotEqual(2, b.x);
+	assertNotEqual(1, b.y);
+}
