@@ -222,6 +222,16 @@ function test_vec2_op_sub_number()
 	assertEqual(-9, c.x);
 	assertEqual(-9, c.y);
 }
+function test_vec2_op_sub_vec2()
+{
+	a = one;
+	b = new vec2(5, 10);
+	
+	c = a.__sub__(b);
+	
+	assertEqual(-4, c.x);
+	assertEqual(-9, c.y);
+}
 
 #endregion
 
