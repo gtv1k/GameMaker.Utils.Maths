@@ -255,6 +255,17 @@ function test_vec2_op_mod_vec2()
 	assertEqual(9, c.y);
 }
 
+
+function test_vec2_op_neg()
+{
+	a = one;
+	
+	b = a._neg();
+	
+	assertEqual(-1, b.x);
+	assertEqual(-1, b.y);
+}
+
 #endregion
 
 #endregion
