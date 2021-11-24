@@ -201,6 +201,16 @@ function test_vec2_op_add_number()
 	assertEqual(11, c.x);
 	assertEqual(11, c.y);
 }
+function test_vec2_op_add_vec2()
+{
+	a = one;
+	b = new vec2(5, 10);
+	
+	c = a.__add__(b);
+	
+	assertEqual(6, c.x);
+	assertEqual(11, c.y);
+}
 
 #endregion
 
