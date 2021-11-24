@@ -212,6 +212,17 @@ function test_vec2_op_add_vec2()
 	assertEqual(11, c.y);
 }
 
+function test_vec2_op_sub_number()
+{
+	a = one;
+	b = 10;
+	
+	c = a.__sub__(b);
+	
+	assertEqual(-9, c.x);
+	assertEqual(-9, c.y);
+}
+
 #endregion
 
 #endregion
