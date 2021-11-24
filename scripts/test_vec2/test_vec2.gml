@@ -79,4 +79,13 @@ function test_vec2_default_left()
 	assertEqual(0, a.y);
 }
 
+function test_vec2_default_right()
+{
+	a = right;
+	
+	assertEqual(1, a.x);
+	assertEqual(0, a.y);
+}
+
+
 #endregion
