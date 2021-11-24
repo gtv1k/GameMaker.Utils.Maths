@@ -143,3 +143,22 @@ function test_vec2_swizzle_yy()
 }
 
 #endregion
+
+#region Operators
+
+#region Arithmetic
+
+function test_vec2_op_mul_number()
+{
+	a = up;
+	b = 10;
+	
+	c = a.__mul__(b);
+	
+	assertEqual(0,  c.x);
+	assertEqual(10, c.y);
+}
+
+#endregion
+
+#endregion
