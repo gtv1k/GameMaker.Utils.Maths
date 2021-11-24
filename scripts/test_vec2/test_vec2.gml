@@ -116,4 +116,17 @@ function test_vec2_swizzle_yx()
 	assertEqual(0, b.y);
 }
 
+function test_vec2_swizzle_xx()
+{
+	a = up;
+	
+	assertEqual(0, a.x);
+	assertEqual(1, a.y);
+	
+	b = a.xx();
+	
+	assertEqual(0, b.x);
+	assertEqual(0, b.y);
+}
+
 #endregion
