@@ -276,6 +276,20 @@ function test_vec2_op_abs()
 	assertEqual(420, b.y);
 }
 
+#endregion
+
+#region Comparison
+
+function test_vec2_op_eq_number()
+{
+	a = new vec2(69);
+	b = 69;
+	
+	c = a.__eq__(b);
+	
+	assertTrue(c.x);
+	assertTrue(c.y);
+}
 
 #endregion
 
