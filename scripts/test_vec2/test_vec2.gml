@@ -1,4 +1,6 @@
-function test_vec2_constructor() 
+#region Constructors
+
+function test_vec2_constructor()
 {
 	a = new vec2(1, 2);
 	assertEqual(1, a.x);
@@ -8,7 +10,7 @@ function test_vec2_constructor()
 	assertNotEqual(1, a.y);
 }
 
-function test_vec2_constructor_scalar() 
+function test_vec2_constructor_scalar()
 {
 	a = new vec2(69);
 	assertEqual(69, a.x);
@@ -18,7 +20,7 @@ function test_vec2_constructor_scalar()
 	assertNotEqual(0, a.y);
 }
 
-function test_vec2_constructor_empty() 
+function test_vec2_constructor_empty()
 {
 	a = new vec2();
 	assertEqual(0, a.x);
@@ -28,7 +30,7 @@ function test_vec2_constructor_empty()
 	assertNotEqual(69, a.y);
 }
 
-function test_vec2_constructor_other() 
+function test_vec2_constructor_other()
 {
 	a = new vec2(1, 2);
 	b = new vec2(a);
@@ -39,3 +41,20 @@ function test_vec2_constructor_other()
 	assertNotEqual(2, b.x);
 	assertNotEqual(1, b.y);
 }
+
+#endregion
+
+#region Defaults
+
+function test_vec2_default_zero()
+{
+	a = zero;
+	
+	assertEqual(0, a.x);
+	assertEqual(0, a.y);
+	
+	assertNotEqual(2, a.x);
+	assertNotEqual(1, a.y);
+}
+
+#endregion
