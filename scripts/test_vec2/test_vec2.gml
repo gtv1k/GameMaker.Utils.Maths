@@ -368,6 +368,17 @@ function test_vec2_op_gt_number()
 	assertTrue(re_1.x);
 	assertTrue(re_1.y);
 }
+function test_vec2_op_gt_vec2()
+{
+	lhs = new vec2(69);
+	
+	rhs = new vec2(420, 1);
+	
+	re = lhs.__lt__(rhs);
+	
+	assertTrue(re.x);
+	assertFalse(re.y);
+}
 
 #endregion
 
