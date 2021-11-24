@@ -148,7 +148,7 @@ function vec2(x = 0, y = 0) constructor
 	{
 		return self = self.__mul__(input);
 	}
-		
+	
 	//Compound Division
 	//Same result as `value = value.__div__(input);`
 	static __c_div__=function(input)
@@ -156,7 +156,7 @@ function vec2(x = 0, y = 0) constructor
 		return self = self.__div__(input);
 	}
 	
-		
+	
 	//Compound Addition
 	//Same result as `value = value.__add__(input);`
 	static __c_add__=function(input)
