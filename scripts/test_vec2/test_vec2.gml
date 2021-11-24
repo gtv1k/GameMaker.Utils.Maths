@@ -170,6 +170,19 @@ function test_vec2_op_mul_vec2()
 	assertEqual(10, c.y);
 }
 
+
+function test_vec2_op_div_number()
+{
+	a = one;
+	b = 10;
+	
+	c = a.__div__(b);
+	
+	assertEqual(0.1, c.x);
+	assertEqual(0.1, c.y);
+}
+
+
 #endregion
 
 #endregion
