@@ -290,6 +290,16 @@ function test_vec2_op_eq_number()
 	assertTrue(c.x);
 	assertTrue(c.y);
 }
+function test_vec2_op_eq_vec2()
+{
+	a = new vec2(69);
+	b = new vec2(69, 420);
+	
+	c = a.__eq__(b);
+	
+	assertTrue(c.x);
+	assertFalse(c.y);
+}
 
 #endregion
 
