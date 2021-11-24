@@ -17,3 +17,13 @@ function test_vec2_constructor_scalar()
 	assertNotEqual(0, a.x);
 	assertNotEqual(0, a.y);
 }
+
+function test_vec2_constructor_empty() 
+{
+	a = new vec2();
+	assertEqual(0, a.x);
+	assertEqual(0, a.y);
+	
+	assertNotEqual(69, a.x);
+	assertNotEqual(69, a.y);
+}
