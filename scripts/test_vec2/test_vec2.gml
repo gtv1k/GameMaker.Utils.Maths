@@ -158,7 +158,6 @@ function test_vec2_op_mul_number()
 	assertEqual(10, c.x);
 	assertEqual(10, c.y);
 }
-
 function test_vec2_op_mul_vec2()
 {
 	a = one;
@@ -170,7 +169,6 @@ function test_vec2_op_mul_vec2()
 	assertEqual(10, c.y);
 }
 
-
 function test_vec2_op_div_number()
 {
 	a = one;
@@ -181,7 +179,6 @@ function test_vec2_op_div_number()
 	assertEqual(0.1, c.x);
 	assertEqual(0.1, c.y);
 }
-
 function test_vec2_op_div_vec2()
 {
 	a = one;
@@ -191,6 +188,18 @@ function test_vec2_op_div_vec2()
 	
 	assertEqual(0.2, c.x);
 	assertEqual(0.1, c.y);
+}
+
+
+function test_vec2_op_add_number()
+{
+	a = one;
+	b = 10;
+	
+	c = a.__add__(b);
+	
+	assertEqual(11, c.x);
+	assertEqual(11, c.y);
 }
 
 #endregion
