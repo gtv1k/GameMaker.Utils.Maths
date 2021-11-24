@@ -266,6 +266,17 @@ function test_vec2_op_neg()
 	assertEqual(-1, b.y);
 }
 
+function test_vec2_op_abs()
+{
+	a = new vec2(-69, 420);
+	
+	b = a._abs();
+	
+	assertEqual(69, b.x);
+	assertEqual(420, b.y);
+}
+
+
 #endregion
 
 #endregion

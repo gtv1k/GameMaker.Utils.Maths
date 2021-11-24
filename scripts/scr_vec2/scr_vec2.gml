@@ -209,7 +209,7 @@ function vec2(x = 0, y) constructor
 	}
 	
 	
-	//Compound Negation
+	//Compound Negation (kina bullshit, but why not)
 	//Same result as `value = value._neg();`
 	static _c_neg=function()
 	{
