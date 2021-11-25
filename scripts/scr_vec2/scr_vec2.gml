@@ -66,14 +66,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = self.x * input.x;
 			result.y = self.y * input.y;
+			return result;
 		}
-		else //is number
+		if is_numeric(input)
 		{	
 			result.x = self.x * input;
 			result.y = self.y * input;
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	//Division
@@ -85,14 +87,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = self.x / input.x;
 			result.y = self.y / input.y;
+			return result;
 		}
-		else //is number
+		if is_numeric(input)
 		{	
 			result.x = self.x / input;
 			result.y = self.y / input;
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -105,14 +109,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = self.x + input.x;
 			result.y = self.y + input.y;
+			return result;
 		}
-		else //is number
+		if is_numeric(input)
 		{	
 			result.x = self.x + input;
 			result.y = self.y + input;
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	//Subtraction
@@ -124,14 +130,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = self.x - input.x;
 			result.y = self.y - input.y;
+			return result;
 		}
-		else //is number
+		if is_numeric(input)
 		{	
 			result.x = self.x - input;
 			result.y = self.y - input;
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -144,14 +152,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = self.x % input.x;
 			result.y = self.y % input.y;
+			return result;
 		}
-		else //is number
+		if is_numeric(input)
 		{	
 			result.x = self.x % input;
 			result.y = self.y % input;
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -236,14 +246,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = (self.x == input.x);
 			result.y = (self.y == input.y);
+			return result;
 		}
-		else //is number (or bool??)
+		if is_numeric(input)
 		{	
 			result.x = (self.x == input);
 			result.y = (self.y == input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	//Is Not Equal To
@@ -255,14 +267,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = (self.x != input.x);
 			result.y = (self.y != input.y);
+			return result;
 		}
-		else //is number (or bool??)
+		if is_numeric(input)
 		{	
 			result.x = (self.x != input);
 			result.y = (self.y != input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -275,14 +289,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = (self.x < input.x);
 			result.y = (self.y < input.y);
+			return result;
 		}
-		else //is number (or bool??)
+		if is_numeric(input)
 		{	
 			result.x = (self.x < input);
 			result.y = (self.y < input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	//Is Greather Than
@@ -290,18 +306,20 @@ function vec2(x = 0, y) constructor
 	{
 		var result = new bool2();
 		
-		if is_struct(input) //is bool2
+		if is_struct(input) //is vec2
 		{
 			result.x = (self.x > input.x);
 			result.y = (self.y > input.y);
+			return result;
 		}
-		else //is bool
+		if is_numeric(input)
 		{	
 			result.x = (self.x > input);
 			result.y = (self.y > input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -314,14 +332,16 @@ function vec2(x = 0, y) constructor
 		{
 			result.x = (self.x <= input.x);
 			result.y = (self.y <= input.y);
+			return result;
 		}
-		else //is number (or bool??)
+		if is_numeric(input)
 		{	
 			result.x = (self.x <= input);
 			result.y = (self.y <= input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	//Is Greather Than Or Equal To
@@ -329,18 +349,20 @@ function vec2(x = 0, y) constructor
 	{
 		var result = new bool2();
 		
-		if is_struct(input) //is bool2
+		if is_struct(input) //is vec2
 		{
 			result.x = (self.x >= input.x);
 			result.y = (self.y >= input.y);
+			return result;
 		}
-		else //is bool
+		if is_numeric(input)
 		{	
 			result.x = (self.x >= input);
 			result.y = (self.y >= input);
+			return result;
 		}
 	
-		return result;
+		throw ("Unexpected Argument!");
 	}
 	
 	#endregion
@@ -350,10 +372,10 @@ function vec2(x = 0, y) constructor
 
 #region Aliases
 
-#macro vector2   vec2
-#macro vector    vec2
-#macro position  vec2
-#macro direction vec2
+#macro _vector2   vec2
+#macro _vector    vec2
+#macro _position  vec2
+#macro _direction vec2
 
 #region	Operators/Functions
 
