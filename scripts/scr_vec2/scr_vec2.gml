@@ -306,10 +306,13 @@ function vec2(x = 0, y) constructor
 
 #region Aliases
 
-#macro _vector2   vec2
-#macro _vector    vec2
-#macro _position  vec2
-#macro _direction vec2
+#macro Vector    vec2;
+#macro Position  vec2;
+#macro Direction vec2;
+
+#macro Vec vec2;
+#macro Pos vec2;
+#macro Dir vec2;
 
 #region	Operators/Functions
 
