@@ -320,6 +320,11 @@ function vec2(x = 0, y) constructor
 		return sqrt( (self).__dot__(self) );
 	}
 	
+	static LengthSquared=function()
+	{
+		return (self).__dot__(self);
+	}
+	
 	#endregion
 }
 
