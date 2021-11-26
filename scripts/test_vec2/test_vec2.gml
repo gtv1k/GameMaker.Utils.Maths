@@ -453,3 +453,42 @@ function test_vec2_op_ge_vec2()
 #endregion
 
 #endregion
+
+#region Functions
+
+function test_vec2_fn_Length()
+{
+	lhs_0 = new vec2(0, 10);
+	
+	assertEqual(lhs_0.Length(), 10);
+	
+	lhs_1 = new vec2(5, 10);
+	
+	assertEqual(lhs_1.Length(), 11.18034);
+}
+
+function test_vec2_fn_LengthSquared()
+{
+	lhs_0 = new vec2(0, 10);
+	
+	assertEqual(lhs_0.LengthSquared(), 100);
+	
+	lhs_1 = new vec2(5, 10);
+	
+	assertEqual(lhs_1.LengthSquared(), 125);
+}
+
+function test_vec2_fn_Normalized()
+{
+	lhs_0 = new vec2(0, 10);
+	ret_0 = lhs_0.Normalized();
+	
+	assertEqual(ret_0.Length(), 1);
+	
+	lhs_1 = new vec2(5, 10);
+	ret_1 = lhs_1.Normalized();
+	
+	assertEqual(ret_1.Length(), 1);
+}
+
+#endregion
