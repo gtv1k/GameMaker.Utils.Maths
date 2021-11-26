@@ -467,4 +467,15 @@ function test_vec2_fn_Length()
 	assertEqual(lhs_1.Length(), 11.18034);
 }
 
+function test_vec2_fn_LengthSquared()
+{
+	lhs_0 = new vec2(0, 10);
+	
+	assertEqual(lhs_0.LengthSquared(), 100);
+	
+	lhs_1 = new vec2(5, 10);
+	
+	assertEqual(lhs_1.LengthSquared(), 125);
+}
+
 #endregion
