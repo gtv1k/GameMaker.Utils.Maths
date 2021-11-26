@@ -327,27 +327,32 @@ function test_vec2_op_lt_number()
 	lhs = new vec2(1, 420);
 	
 	rhs_0 = 69;
-	re_0 = lhs.__lt__(rhs_0);
+	ret_0 = lhs.__lt__(rhs_0);
 	
-	assertTrue(re_0.x);  //1 < 69
-	assertFalse(re_0.y); //420 < 69
+	assertTrue(ret_0.x);  //1 < 69
+	assertFalse(ret_0.y); //420 < 69
 	
 	rhs_1 = 1;
-	re_1 = lhs.__lt__(rhs_1);
+	ret_1 = lhs.__lt__(rhs_1);
 	
-	assertFalse(re_1.x); //1 < 1
-	assertFalse(re_1.y); //420 < 1
+	assertFalse(ret_1.x); //1   < 1
+	assertFalse(ret_1.y); //420 < 1
 }
 function test_vec2_op_lt_vec2()
 {
-	lhs = new vec2(69);
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = lhs_0.__lt__(rhs_0);
 	
-	rhs = new vec2(420, 1);
+	assertFalse(ret_0.x); //1   < -69
+	assertTrue( ret_0.y); //420 < 69
 	
-	re = lhs.__lt__(rhs);
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = lhs_1.__lt__(rhs_1);
 	
-	assertTrue(re.x);
-	assertFalse(re.y);
+	assertTrue( ret_1.x); //-1  < 69
+	assertFalse(ret_1.y); //420 < 420
 }
 
 function test_vec2_op_gt_number()
@@ -357,15 +362,15 @@ function test_vec2_op_gt_number()
 	rhs_0 = 420;
 	rhs_1 = 1;
 	
-	re_0 = lhs.__gt__(rhs_0);
+	ret_0 = lhs.__gt__(rhs_0);
 	
-	assertFalse(re_0.x);
-	assertFalse(re_0.y);
+	assertFalse(ret_0.x);
+	assertFalse(ret_0.y);
 	
-	re_1 = lhs.__gt__(rhs_1);
+	ret_1 = lhs.__gt__(rhs_1);
 	
-	assertTrue(re_1.x);
-	assertTrue(re_1.y);
+	assertTrue(ret_1.x);
+	assertTrue(ret_1.y);
 }
 function test_vec2_op_gt_vec2()
 {
@@ -375,7 +380,7 @@ function test_vec2_op_gt_vec2()
 	
 	re = lhs.__lt__(rhs);
 	
-	assertTrue(re.x);
+	assertTrue( re.x);
 	assertFalse(re.y);
 }
 
@@ -384,16 +389,32 @@ function test_vec2_op_le_number()
 	lhs = new vec2(1, 420);
 	
 	rhs_0 = 69;
-	re_0 = lhs.__le__(rhs_0);
+	ret_0 = lhs.__le__(rhs_0);
 	
-	assertTrue(re_0.x);  //1 <= 69
-	assertFalse(re_0.y); //420 <= 69
+	assertTrue( ret_0.x); //1   <= 69
+	assertFalse(ret_0.y); //420 <= 69
 	
 	rhs_1 = 1;
-	re_1 = lhs.__le__(rhs_1);
+	ret_1 = lhs.__le__(rhs_1);
 	
-	assertTrue(re_1.x);  //1 <= 1
-	assertFalse(re_1.y); //420 <= 1
+	assertTrue( ret_1.x); //1   <= 1
+	assertFalse(ret_1.y); //420 <= 1
+}
+function test_vec2_op_le_vec2()
+{
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = lhs_0.__lt__(rhs_0);
+	
+	assertFalse(ret_0.x); //1   <= -69
+	assertTrue( ret_0.y); //420 <= 69
+	
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = lhs_1.__lt__(rhs_1);
+	
+	assertTrue( ret_1.x); //-1  <= 69
+	assertFalse(ret_1.y); //420 <= 420
 }
 
 #endregion

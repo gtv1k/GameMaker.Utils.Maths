@@ -40,9 +40,9 @@
   ],
   "Folders": [
     {"folderPath":"folders/GameMaker.Utils.Maths.yy","order":15,"resourceVersion":"1.0","name":"GameMaker.Utils.Maths","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/GameMaker.Utils.Maths/Objects.yy","order":1,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/GameMaker.Utils.Maths/Tests/Objects.yy","order":2,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/GameMaker.Utils.Maths/Scripts.yy","order":3,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/GameMaker.Utils.Maths/Rooms.yy","order":4,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/GameMaker.Utils.Maths/Tests/Rooms.yy","order":1,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/GameMaker.Utils.Testing.yy","order":16,"resourceVersion":"1.0","name":"GameMaker.Utils.Testing","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/GameMaker.Utils.Testing/Scripts.yy","order":1,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/GameMaker.Utils.Testing/Scripts/Editor.yy","order":1,"resourceVersion":"1.0","name":"Editor","tags":[],"resourceType":"GMFolder",},
