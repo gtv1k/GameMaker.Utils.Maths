@@ -317,12 +317,17 @@ function vec2(x = 0, y) constructor
 	
 	static Length=function()
 	{
-		return sqrt( (self).__dot__(self) );
+		return sqrt(LengthSquared());
 	}
 	
 	static LengthSquared=function()
 	{
 		return (self).__dot__(self);
+	}
+	
+	static Sqrt=function()
+	{
+		return new vec2(sqrt(self.x), sqrt(self.y));
 	}
 	
 	#endregion
