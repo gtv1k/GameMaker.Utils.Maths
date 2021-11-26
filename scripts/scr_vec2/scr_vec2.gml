@@ -139,8 +139,9 @@ function vec2(x = 0, y) constructor
 	{
 		if is_struct(input) //is vec2
 		{
-			return self.x * input.x + self.y * input.y;
+			return (self.x * input.x) + (self.y * input.y);
 		}
+		
 		throw ("Unexpected Argument!");
 	}
 	
@@ -309,6 +310,15 @@ function vec2(x = 0, y) constructor
 	}
 	
 	#endregion
+	
+	#endregion
+	
+	#region Functions
+	
+	static Length=function()
+	{
+		return (self).__dot__(self);
+	}
 	
 	#endregion
 }
