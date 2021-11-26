@@ -335,6 +335,11 @@ function vec2(x = 0, y) constructor
 		return (self).__mul__(1 / Length());
 	}
 	
+	static Normalize=function()
+	{
+		return self = self.Normalized();
+	}
+	
 	#endregion
 }
 
