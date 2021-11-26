@@ -317,7 +317,7 @@ function vec2(x = 0, y) constructor
 	
 	static Length=function()
 	{
-		return (self).__dot__(self);
+		return sqrt( (self).__dot__(self) );
 	}
 	
 	#endregion
