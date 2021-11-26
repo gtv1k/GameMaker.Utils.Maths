@@ -134,6 +134,16 @@ function vec2(x = 0, y) constructor
 		throw ("Unexpected Argument!");
 	}
 	
+	//Dot Product
+	static __dot__=function(input)
+	{
+		if is_struct(input) //is vec2
+		{
+			return (self.x * input.x) + (self.y * input.y);
+		}
+		
+		throw ("Unexpected Argument!");
+	}
 	
 	//Negation
 	static _neg=function()
@@ -300,6 +310,35 @@ function vec2(x = 0, y) constructor
 	}
 	
 	#endregion
+	
+	#endregion
+	
+	#region Functions
+	
+	static Length=function()
+	{
+		return sqrt(LengthSquared());
+	}
+	
+	static LengthSquared=function()
+	{
+		return (self).__dot__(self);
+	}
+	
+	static Sqrt=function()
+	{
+		return new vec2(sqrt(self.x), sqrt(self.y));
+	}
+	
+	static Normalized=function()
+	{
+		return (self).__mul__(1 / Length());
+	}
+	
+	static Normalize=function()
+	{
+		return self = self.Normalized();
+	}
 	
 	#endregion
 }
