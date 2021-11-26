@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Rooms",
-    "path": "folders/GameMaker.Utils.Maths/Rooms.yy",
+    "path": "folders/GameMaker.Utils.Maths/Tests/Rooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "lvl_unit_tests",

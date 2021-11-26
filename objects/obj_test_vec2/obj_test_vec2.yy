@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/GameMaker.Utils.Maths/Objects.yy",
+    "path": "folders/GameMaker.Utils.Maths/Tests/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_test_vec2",

@@ -276,6 +276,179 @@ function test_vec2_op_abs()
 	assertEqual(420, b.y);
 }
 
+#endregion
+
+#region Comparison
+
+function test_vec2_op_eq_number()
+{
+	a = new vec2(69);
+	b = 69;
+	
+	c = a.__eq__(b);
+	
+	assertTrue(c.x);
+	assertTrue(c.y);
+}
+function test_vec2_op_eq_vec2()
+{
+	a = new vec2(69);
+	b = new vec2(69, 420);
+	
+	c = a.__eq__(b);
+	
+	assertTrue(c.x);
+	assertFalse(c.y);
+}
+
+function test_vec2_op_ne_number()
+{
+	a = new vec2(69);
+	b = 69;
+	
+	c = a.__ne__(b);
+	
+	assertFalse(c.x);
+	assertFalse(c.y);
+}
+function test_vec2_op_ne_vec2()
+{
+	a = new vec2(69);
+	b = new vec2(69, 420);
+	
+	c = a.__ne__(b);
+	
+	assertFalse(c.x);
+	assertTrue(c.y);
+}
+
+function test_vec2_op_lt_number()
+{
+	lhs = new vec2(1, 420);
+	
+	rhs_0 = 69;
+	ret_0 = lhs.__lt__(rhs_0);
+	
+	assertTrue(ret_0.x);  //1 < 69
+	assertFalse(ret_0.y); //420 < 69
+	
+	rhs_1 = 1;
+	ret_1 = lhs.__lt__(rhs_1);
+	
+	assertFalse(ret_1.x); //1   < 1
+	assertFalse(ret_1.y); //420 < 1
+}
+function test_vec2_op_lt_vec2()
+{
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = lhs_0.__lt__(rhs_0);
+	
+	assertFalse(ret_0.x); //1   < -69
+	assertTrue( ret_0.y); //420 < 69
+	
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = lhs_1.__lt__(rhs_1);
+	
+	assertTrue( ret_1.x); //-1  < 69
+	assertFalse(ret_1.y); //420 < 420
+}
+
+function test_vec2_op_gt_number()
+{
+	lhs = new vec2(69);
+	
+	rhs_0 = 420;
+	rhs_1 = 1;
+	
+	ret_0 = lhs.__gt__(rhs_0);
+	
+	assertFalse(ret_0.x);
+	assertFalse(ret_0.y);
+	
+	ret_1 = lhs.__gt__(rhs_1);
+	
+	assertTrue(ret_1.x);
+	assertTrue(ret_1.y);
+}
+function test_vec2_op_gt_vec2()
+{
+	lhs = new vec2(69);
+	
+	rhs = new vec2(420, 1);
+	
+	re = lhs.__lt__(rhs);
+	
+	assertTrue( re.x);
+	assertFalse(re.y);
+}
+
+function test_vec2_op_le_number()
+{
+	lhs = new vec2(1, 420);
+	
+	rhs_0 = 69;
+	ret_0 = lhs.__le__(rhs_0);
+	
+	assertTrue( ret_0.x); //1   <= 69
+	assertFalse(ret_0.y); //420 <= 69
+	
+	rhs_1 = 1;
+	ret_1 = lhs.__le__(rhs_1);
+	
+	assertTrue( ret_1.x); //1   <= 1
+	assertFalse(ret_1.y); //420 <= 1
+}
+function test_vec2_op_le_vec2()
+{
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = (lhs_0).__le__(rhs_0);
+	
+	assertFalse(ret_0.x); //1  <= -69
+	assertTrue( ret_0.y); //69 <= 420
+	
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = (lhs_1).__le__(rhs_1);
+	
+	assertTrue( ret_1.x); //-1  <= 69
+	assertTrue(ret_1.y); //420 <= 420
+}
+
+function test_vec2_op_ge_number()
+{
+	lhs_0 = new vec2(1, 420);	
+	rhs_0 = 69;
+	ret_0 = (lhs_0).__ge__(rhs_0);
+	
+	assertFalse(ret_0.x); //1   >= 69
+	assertTrue( ret_0.y); //420 >= 69
+	
+	lhs_1 = new vec2(1, -420);
+	rhs_1 = 1;
+	ret_1 = (lhs_1).__ge__(rhs_1);
+	
+	assertTrue( ret_1.x); //1    >= 1
+	assertFalse(ret_1.y); //-420 >= 1
+}
+function test_vec2_op_ge_vec2()
+{
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = (lhs_0).__ge__(rhs_0);
+	
+	assertTrue( ret_0.x); //1  >= -69
+	assertFalse(ret_0.y); //69 >= 420
+	
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = (lhs_1).__ge__(rhs_1);
+	
+	assertFalse(ret_1.x); //-1  >= 69
+	assertTrue( ret_1.y); //420 >= 420
+}
 
 #endregion
 
