@@ -433,6 +433,22 @@ function test_vec2_op_ge_number()
 	assertTrue( ret_1.x); //1    >= 1
 	assertFalse(ret_1.y); //-420 >= 1
 }
+function test_vec2_op_ge_vec2()
+{
+	lhs_0 = new vec2(1,   69);
+	rhs_0 = new vec2(-69, 420);
+	ret_0 = (lhs_0).__ge__(rhs_0);
+	
+	assertTrue( ret_0.x); //1  >= -69
+	assertFalse(ret_0.y); //69 >= 420
+	
+	lhs_1 = new vec2(-1, 420);
+	rhs_1 = new vec2(69, 420);
+	ret_1 = (lhs_1).__ge__(rhs_1);
+	
+	assertFalse(ret_1.x); //-1  >= 69
+	assertTrue( ret_1.y); //420 >= 420
+}
 
 #endregion
 
