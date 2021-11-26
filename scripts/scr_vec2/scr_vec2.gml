@@ -134,6 +134,15 @@ function vec2(x = 0, y) constructor
 		throw ("Unexpected Argument!");
 	}
 	
+	//Dot Product
+	static __dot__=function(input)
+	{
+		if is_struct(input) //is vec2
+		{
+			return self.x * input.x + self.y * input.y;
+		}
+		throw ("Unexpected Argument!");
+	}
 	
 	//Negation
 	static _neg=function()
