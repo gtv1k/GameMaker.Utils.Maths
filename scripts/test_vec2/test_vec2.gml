@@ -478,4 +478,17 @@ function test_vec2_fn_LengthSquared()
 	assertEqual(lhs_1.LengthSquared(), 125);
 }
 
+function test_vec2_fn_Normalized()
+{
+	lhs_0 = new vec2(0, 10);
+	ret_0 = lhs_0.Normalized();
+	
+	assertEqual(ret_0.Length(), 1);
+	
+	lhs_1 = new vec2(5, 10);
+	ret_1 = lhs_1.Normalized();
+	
+	assertEqual(ret_1.Length(), 1);
+}
+
 #endregion

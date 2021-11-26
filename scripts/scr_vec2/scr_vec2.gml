@@ -330,6 +330,11 @@ function vec2(x = 0, y) constructor
 		return new vec2(sqrt(self.x), sqrt(self.y));
 	}
 	
+	static Normalized=function()
+	{
+		return (self).__mul__(1 / Length());
+	}
+	
 	#endregion
 }
 
