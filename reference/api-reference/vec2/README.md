@@ -58,51 +58,49 @@ Constructs new vectors from the current vector's components.
 
 Multiplication
 
-`__mul__(number)`
+[`__mul__(number)`](operators/arithmetic.md#\_\_mul\_\_-input-number)
 
-`__mul__(vec2)`
+[`__mul__(vec2)`](operators/arithmetic.md#\_\_mul\_\_-input-vec2)
 
 Division
 
-`__div__(number)`
+[`__div__(number)`](operators/arithmetic.md#\_\_div\_\_-input-number)
 
-`__div__(vec2)`
+[`__div__(vec2)`](operators/arithmetic.md#\_\_div\_\_-input-vec2)
 
 Addition
 
-`__add__(number)`
+[`__add__(number)`](operators/arithmetic.md#\_\_add\_\_-input-number)
 
-`__add__(vec2)`
+[`__add__(vec2)`](operators/arithmetic.md#\_\_add\_\_-input-vec2)
 
 Subtraction
 
-`__sub__(number)`
+[`__sub__(number)`](operators/arithmetic.md#\_\_sub\_\_-input-number)
 
-`__sub__(vec2)`
+[`__sub__(vec2)`](operators/arithmetic.md#\_\_sub\_\_-input-vec2)
 
 
 
 Remainder
 
-`__mod__(number)`
+[`__mod__(number)`](operators/arithmetic.md#\_\_mod\_\_-input-number)
 
-`__mod__(vec2)`
+[`__mod__(vec2)`](operators/arithmetic.md#\_\_mod\_\_-input-vec2)
 
 Dot Product
 
-`__dot__(number)`
-
-`__dot__(vec2)`
+[`__dot__(vec2)`](operators/arithmetic.md#\_\_dot\_\_-input-vec2)
 
 
 
-Negate
+Negation
 
-`_neg()`
+[`_neg()`](operators/arithmetic.md#\_neg)
 
 Absolute
 
-`_abs()`
+[`_abs()`](operators/arithmetic.md#\_abs)
 
 ### Compound Arithmetic
 
@@ -137,12 +135,6 @@ Compound Remainder
 `__c_mod__(number)`
 
 `__c_mod__(vec2)`
-
-Compound Dot Product
-
-`__c_dot__(number)`
-
-`__c_dot__(vec2)`
 
 
 
