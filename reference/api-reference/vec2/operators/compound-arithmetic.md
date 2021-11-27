@@ -2,11 +2,11 @@
 
 ## Multiplication
 
-### `__c_mul__(input: number)`
+Equivalent of `lhs *= rhs` for numbers.
+
+### `__c_mul__(input: number)` -> `vec2`
 
 Returns the vector _multiplied _ by the **input **`number`.
-
-Equivalent of `lhs *= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -18,11 +18,9 @@ rhs = 10;
 //lhs.y = 10
 ```
 
-### `__c_mul__(input: vec2)`
+### `__c_mul__(input: vec2)` -> `vec2`
 
 _Multiplies_ the vector by the **input** `vec2`.
-
-Equivalent of `lhs *= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -36,11 +34,11 @@ rhs = new vec2(5, 10);
 
 ## Division
 
-### `__c_div__(input: number)`
+Equivalent of `lhs /= rhs` for numbers.
+
+### `__c_div__(input: number)` -> `vec2`
 
 _Divides_ the vector_ _by the **input **`number`.
-
-Equivalent of `lhs /= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -52,11 +50,9 @@ rhs = 10;
 //lhs.y = 0.1
 ```
 
-### `__c_div__(input: vec2)`
+### `__c_div__(input: vec2)` -> `vec2`
 
 _Divides_ the vector_ _by the **input ** `vec2`.
-
-Equivalent of `lhs /= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -72,11 +68,11 @@ rhs = new vec2(5, 10);
 
 ## Addition
 
-### `__c_add__(input: number)`
+Equivalent of `lhs += rhs` for numbers.
+
+### `__c_add__(input: number)` -> `vec2`
 
 Component-wise _addition _of the vector and the **input **`number`.
-
-Equivalent of `lhs += rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -88,11 +84,9 @@ rhs = 10;
 //lhs.y = 11
 ```
 
-### `__c_add__(input: vec2)`
+### `__c_add__(input: vec2)` -> `vec2`
 
 Component-wise _addition _of the vector and the **input **`vec2`.
-
-Equivalent of `lhs += rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -106,11 +100,11 @@ rhs = new vec2(5, 10);
 
 ## Subtraction
 
-### `__c_sub__(input: number)`
+Equivalent of `lhs -= rhs` for numbers.
+
+### `__c_sub__(input: number)` -> `vec2`
 
 Component-wise _subtraction _of the vector and the **input **`number`.
-
-Equivalent of `lhs -= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -122,11 +116,9 @@ rhs = 10;
 //lhs.y = -9
 ```
 
-### `__c_sub__(input: vec2)`
+### `__c_sub__(input: vec2)` -> `vec2`
 
 Component-wise _subtraction _of the vector and the **input **`vec2`.
-
-Equivalent of `lhs -= rhs` for numbers.
 
 ```gml
 lhs = new vec2(1, 1);
@@ -140,11 +132,11 @@ rhs = new vec2(5, 10);
 
 ## Remainder
 
-### `__c_mod__(input: number)`
+Equivalent of `lhs %= rhs` for numbers.
+
+### `__c_mod__(input: number)` -> `vec2`
 
 Component-wise _modulus _of the vector and the **input **`number`.
-
-Equivalent of `lhs %= rhs` for numbers.
 
 ```gml
 lhs = new vec2(69);
@@ -156,11 +148,9 @@ rhs = 10;
 //lhs.y = 9
 ```
 
-### `__c_mod__(input: vec2)`
+### `__c_mod__(input: vec2)` -> `vec2`
 
 Component-wise _modulus _of the vector and the **input **`vec2`.
-
-Equivalent of `lhs %= rhs` for numbers.
 
 ```gml
 lhs = new vec2(69);
@@ -174,11 +164,11 @@ rhs = new vec2(5, 10);
 
 ## Negate
 
-### `_c_neg()`
+Equivalent of `v = -v` for numbers.
+
+### `_c_neg()` -> `vec2`
 
 Component-wise _negation _of the vector.
-
-Equivalent of `-rhs` for numbers.
 
 ```gml
 v = new vec2(1, -69);
@@ -191,11 +181,11 @@ ret = v._c_neg();
 
 ## Absolute
 
-### `_c_abs()`
+Equivalent of `v = abs(v)` for numbers.&#x20;
+
+### `_c_abs()` -> `vec2`
 
 Component-wise _absolute value _of the vector.
-
-Equivalent of `abs(rhs)` for numbers.&#x20;
 
 It makes numbers positive.
 
