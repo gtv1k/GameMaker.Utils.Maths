@@ -26,19 +26,19 @@ Constructors are the different ways of creating a `vec2`.
 
 Shorthands for writing vectors you'll use a lot.
 
-`zero`
+[`zero`](defaults.md#zero)
 
-`one`
+[`one`](defaults.md#one)
 
 
 
-`up`
+[`up`](defaults.md#up)
 
-`down`
+[`down`](defaults.md#down)
 
-`left`
+[`left`](defaults.md#left)
 
-`right`
+[`right`](defaults.md#right)
 
 ## Swizzles
 
