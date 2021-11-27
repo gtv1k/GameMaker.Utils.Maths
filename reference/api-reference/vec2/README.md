@@ -44,13 +44,13 @@ Shorthands for writing vectors you'll use a lot.
 
 Constructs new vectors from the current vector's components.
 
-`xy()`
+[`xy()`](swizzles.md#xy)
 
-`yx()`
+[`yx()`](swizzles.md#yx)
 
-`xx()`
+[`xx()`](swizzles.md#xx)
 
-`yy()`
+[`yy()`](swizzles.md#yy)
 
 ## Operators
 
