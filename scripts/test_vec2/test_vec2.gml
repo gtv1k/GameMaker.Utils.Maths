@@ -2,26 +2,26 @@
 
 function test_vec2_constructor()
 {
-	a = new vec2(1, 2);
+	v = new vec2(1, 2);
 	
-	assertEqual(1, a.x);
-	assertEqual(2, a.y);
+	assertEqual(1, v.x);
+	assertEqual(2, v.y);
 }
 
 function test_vec2_constructor_scalar()
 {
-	a = new vec2(69);
+	v = new vec2(69);
 	
-	assertEqual(69, a.x);
-	assertEqual(69, a.y);
+	assertEqual(69, v.x);
+	assertEqual(69, v.y);
 }
 
 function test_vec2_constructor_empty()
 {
-	a = new vec2();
+	v = new vec2();
 	
-	assertEqual(0, a.x);
-	assertEqual(0, a.y);
+	assertEqual(0, v.x);
+	assertEqual(0, v.y);
 }
 
 function test_vec2_constructor_other()
@@ -39,51 +39,51 @@ function test_vec2_constructor_other()
 
 function test_vec2_default_zero()
 {
-	a = zero;
+	v = zero;
 	
-	assertEqual(0, a.x);
-	assertEqual(0, a.y);
+	assertEqual(0, v.x);
+	assertEqual(0, v.y);
 }
 
 function test_vec2_default_one()
 {
-	a = one;
+	v = one;
 	
-	assertEqual(1, a.x);
-	assertEqual(1, a.y);
+	assertEqual(1, v.x);
+	assertEqual(1, v.y);
 }
 
 
 function test_vec2_default_up()
 {
-	a = up;
+	v = up;
 	
-	assertEqual(0, a.x);
-	assertEqual(1, a.y);
+	assertEqual(0, v.x);
+	assertEqual(1, v.y);
 }
 
 function test_vec2_default_down()
 {
-	a = down;
+	v = down;
 	
-	assertEqual(0, a.x);
-	assertEqual(-1, a.y);
+	assertEqual(0,  v.x);
+	assertEqual(-1, v.y);
 }
 
 function test_vec2_default_left()
 {
-	a = left;
+	v = left;
 	
-	assertEqual(-1, a.x);
-	assertEqual(0, a.y);
+	assertEqual(-1, v.x);
+	assertEqual(0,  v.y);
 }
 
 function test_vec2_default_right()
 {
-	a = right;
+	v = right;
 	
-	assertEqual(1, a.x);
-	assertEqual(0, a.y);
+	assertEqual(1, v.x);
+	assertEqual(0, v.y);
 }
 
 #endregion
@@ -150,130 +150,130 @@ function test_vec2_swizzle_yy()
 
 function test_vec2_op_mul_number()
 {
-	a = one;
-	b = 10;
+	lhs = one;
+	rhs = 10;
 	
-	c = a.__mul__(b);
+	ret = (lhs).__mul__(rhs);
 	
-	assertEqual(10, c.x);
-	assertEqual(10, c.y);
+	assertEqual(10, ret.x);
+	assertEqual(10, ret.y);
 }
 function test_vec2_op_mul_vec2()
 {
-	a = one;
-	b = new vec2(5, 10);
+	lhs = one;
+	rhs = new vec2(5, 10);
 	
-	c = a.__mul__(b);
+	ret = (lhs).__mul__(rhs);
 	
-	assertEqual(5,  c.x);
-	assertEqual(10, c.y);
+	assertEqual(5,  ret.x);
+	assertEqual(10, ret.y);
 }
 
 function test_vec2_op_div_number()
 {
-	a = one;
-	b = 10;
+	lhs = one;
+	rhs = 10;
 	
-	c = a.__div__(b);
+	ret = (lhs).__div__(rhs);
 	
-	assertEqual(0.1, c.x);
-	assertEqual(0.1, c.y);
+	assertEqual(0.1, ret.x);
+	assertEqual(0.1, ret.y);
 }
 function test_vec2_op_div_vec2()
 {
-	a = one;
-	b = new vec2(5, 10);
+	lhs = one;
+	rhs = new vec2(5, 10);
 	
-	c = a.__div__(b);
+	ret = (lhs).__div__(rhs);
 	
-	assertEqual(0.2, c.x);
-	assertEqual(0.1, c.y);
+	assertEqual(0.2, ret.x);
+	assertEqual(0.1, ret.y);
 }
 
 
 function test_vec2_op_add_number()
 {
-	a = one;
-	b = 10;
+	lhs = one;
+	rhs = 10;
 	
-	c = a.__add__(b);
+	ret = (lhs).__add__(rhs);
 	
-	assertEqual(11, c.x);
-	assertEqual(11, c.y);
+	assertEqual(11, ret.x);
+	assertEqual(11, ret.y);
 }
 function test_vec2_op_add_vec2()
 {
-	a = one;
-	b = new vec2(5, 10);
+	lhs = one;
+	rhs = new vec2(5, 10);
 	
-	c = a.__add__(b);
+	ret = (lhs).__add__(rhs);
 	
-	assertEqual(6, c.x);
-	assertEqual(11, c.y);
+	assertEqual(6,  ret.x);
+	assertEqual(11, ret.y);
 }
 
 function test_vec2_op_sub_number()
 {
-	a = one;
-	b = 10;
+	lhs = one;
+	rhs = 10;
 	
-	c = a.__sub__(b);
+	ret = (lhs).__sub__(rhs);
 	
-	assertEqual(-9, c.x);
-	assertEqual(-9, c.y);
+	assertEqual(-9, ret.x);
+	assertEqual(-9, ret.y);
 }
 function test_vec2_op_sub_vec2()
 {
-	a = one;
-	b = new vec2(5, 10);
+	lhs = one;
+	rhs = new vec2(5, 10);
 	
-	c = a.__sub__(b);
+	ret = (lhs).__sub__(rhs);
 	
-	assertEqual(-4, c.x);
-	assertEqual(-9, c.y);
+	assertEqual(-4, ret.x);
+	assertEqual(-9, ret.y);
 }
 
 
 function test_vec2_op_mod_number()
 {
-	a = new vec2(69);
-	b = 10;
+	lhs = new vec2(69);
+	rhs = 10;
 	
-	c = a.__mod__(b);
+	ret = (lhs).__mod__(rhs);
 	
-	assertEqual(9, c.x);
-	assertEqual(9, c.y);
+	assertEqual(9, ret.x);
+	assertEqual(9, ret.y);
 }
 function test_vec2_op_mod_vec2()
 {
-	a = new vec2(69);
-	b = new vec2(5, 10);
+	lhs = new vec2(69);
+	rhs = new vec2(5, 10);
 	
-	c = a.__mod__(b);
+	ret = (lhs).__mod__(rhs);
 	
-	assertEqual(4, c.x);
-	assertEqual(9, c.y);
+	assertEqual(4, ret.x);
+	assertEqual(9, ret.y);
 }
 
 
 function test_vec2_op_neg()
 {
-	a = one;
+	lhs = one;
 	
-	b = a._neg();
+	ret = lhs._neg();
 	
-	assertEqual(-1, b.x);
-	assertEqual(-1, b.y);
+	assertEqual(-1, ret.x);
+	assertEqual(-1, ret.y);
 }
 
 function test_vec2_op_abs()
 {
-	a = new vec2(-69, 420);
+	lhs = new vec2(-69, 420);
 	
-	b = a._abs();
+	ret = lhs._abs();
 	
-	assertEqual(69, b.x);
-	assertEqual(420, b.y);
+	assertEqual(69,  ret.x);
+	assertEqual(420, ret.y);
 }
 
 #endregion
@@ -282,44 +282,44 @@ function test_vec2_op_abs()
 
 function test_vec2_op_eq_number()
 {
-	a = new vec2(69);
-	b = 69;
+	lhs = new vec2(69);
+	rhs = 69;
 	
-	c = a.__eq__(b);
+	ret = (lhs).__eq__(rhs);
 	
-	assertTrue(c.x);
-	assertTrue(c.y);
+	assertTrue(ret.x);
+	assertTrue(ret.y);
 }
 function test_vec2_op_eq_vec2()
 {
-	a = new vec2(69);
-	b = new vec2(69, 420);
+	lhs = new vec2(69);
+	rhs = new vec2(69, 420);
 	
-	c = a.__eq__(b);
+	ret = (lhs).__eq__(rhs);
 	
-	assertTrue(c.x);
-	assertFalse(c.y);
+	assertTrue( ret.x);
+	assertFalse(ret.y);
 }
 
 function test_vec2_op_ne_number()
 {
-	a = new vec2(69);
-	b = 69;
+	lhs = new vec2(69);
+	rhs = 69;
 	
-	c = a.__ne__(b);
+	ret = (lhs).__ne__(rhs);
 	
-	assertFalse(c.x);
-	assertFalse(c.y);
+	assertFalse(ret.x);
+	assertFalse(ret.y);
 }
 function test_vec2_op_ne_vec2()
 {
-	a = new vec2(69);
-	b = new vec2(69, 420);
+	lhs = new vec2(69);
+	rhs = new vec2(69, 420);
 	
-	c = a.__ne__(b);
+	ret = (lhs).__ne__(rhs);
 	
-	assertFalse(c.x);
-	assertTrue(c.y);
+	assertFalse(ret.x);
+	assertTrue( ret.y);
 }
 
 function test_vec2_op_lt_number()

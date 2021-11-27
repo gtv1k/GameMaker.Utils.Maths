@@ -340,6 +340,26 @@ function vec2(x = 0, y) constructor
 		return self = self.Normalized();
 	}
 	
+	static Distance=function(input)
+	{
+		if is_struct(input) //is vec2
+		{
+			return ((input).__sub__(self)).Length();
+		}
+	
+		throw ("Unexpected Argument!");
+	}
+	
+	static DistanceSquared=function(input)
+	{
+		if is_struct(input) //is vec2
+		{
+			return ((input).__sub__(self)).LengthSquared();
+		}
+	
+		throw ("Unexpected Argument!");
+	}
+	
 	#endregion
 }
 
