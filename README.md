@@ -1,6 +1,6 @@
 # Welcome!
 
-## These are the GameMaker.Utils.Maths docs
+## These are the <mark style="color:yellow;">**GameMaker.Utils.Maths**</mark> docs
 
 Here you'll find all the documentation you need to get up and running with the vector types and other math utilities for GMS.
 
