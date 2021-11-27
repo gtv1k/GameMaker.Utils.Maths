@@ -106,71 +106,83 @@ Absolute
 
 Compound Multiplication
 
-`__c_mul__(number)`
+[`__c_mul__(number)`](operators/compound-arithmetic.md#\_\_c\_mul\_\_-input-number)
 
-`__c_mul__(vec2)`
+[`__c_mul__(vec2)`](operators/compound-arithmetic.md#\_\_c\_mul\_\_-input-vec2)
 
 Compound Division
 
-`__c_div__(number)`
+[`__c_div__(number)`](operators/compound-arithmetic.md#\_\_c\_div\_\_-input-number)
 
-`__c_div__(vec2)`
+[`__c_div__(vec2)`](operators/compound-arithmetic.md#\_\_c\_div\_\_-input-vec2)
 
 Compound Addition
 
-`__c_add__(number)`
+[`__c_add__(number)`](operators/compound-arithmetic.md#\_\_c\_add\_\_-input-number)
 
-`__c_add__(vec2)`
+[`__c_add__(vec2)`](operators/compound-arithmetic.md#\_\_c\_add\_\_-input-vec2)
 
 Compound Subtraction
 
-`__c_sub__(number)`
+[`__c_sub__(number)`](operators/compound-arithmetic.md#\_\_c\_sub\_\_-input-number)
 
-`__c_sub__(vec2)`
+[`__c_sub__(vec2)`](operators/compound-arithmetic.md#\_\_c\_sub\_\_-input-vec2)
 
 
 
 Compound Remainder
 
-`__c_mod__(number)`
+[`__c_mod__(number)`](operators/compound-arithmetic.md#\_\_c\_mod\_\_-input-number)
 
-`__c_mod__(vec2)`
+[`__c_mod__(vec2)`](operators/compound-arithmetic.md#\_\_c\_mod\_\_-input-vec2)
 
 
 
 Compound Negate
 
-`_c_neg()`
+[`_c_neg()`](operators/compound-arithmetic.md#\_c\_neg)
 
 Compound Absolute
 
-`_c_abs()`
+[`_c_abs()`](operators/compound-arithmetic.md#\_c\_abs)
 
 ### Comparisons
 
 Equals
 
-`__eq__(vec2)`
+[`__eq__(number)`](operators/comparisons.md#\_\_eq\_\_-input-number-greater-than-bool2)
+
+[`__eq__(vec2)`](operators/comparisons.md#\_\_eq\_\_-input-vec2-greater-than-bool2)
 
 Not Equals
 
-`__ne__(vec2)`
+[`__ne__(number)`](operators/comparisons.md#\_\_ne\_\_-input-number-greater-than-bool2)
+
+[`__ne__(vec2)`](operators/comparisons.md#\_\_ne\_\_-input-vec2-greater-than-bool2)
 
 &#x20;Is Less Than
 
-`__lt__(vec2)`
+[`__lt__(number)`](operators/comparisons.md#\_\_lt\_\_-input-number-greater-than-bool2)
+
+[`__lt__(vec2)`](operators/comparisons.md#\_\_lt\_\_-input-vec2-greater-than-bool2)
 
 &#x20;Is Greater Than
 
-`__gt__(vec2)`
+[`__gt__(number)`](operators/comparisons.md#\_\_gt\_\_-input-number-greater-than-bool2)
+
+[`__gt__(vec2)`](operators/comparisons.md#\_\_gt\_\_-input-vec2-greater-than-bool2)
 
 &#x20;Is Less Than Or Equal To
 
-`__le__(vec2)`
+[`__le__(number)`](operators/comparisons.md#\_\_le\_\_-input-number-greater-than-bool2)
+
+[`__le__(vec2)`](operators/comparisons.md#\_\_le\_\_-input-vec2-greater-than-bool2)
 
 &#x20;Is Greater Than Or Equal To
 
-`__ge__(vec2)`
+[`__ge__(number)`](operators/comparisons.md#\_\_ge\_\_-input-number-greater-than-bool2)
+
+[`__ge__(vec2)`](operators/comparisons.md#\_\_ge\_\_-input-vec2-greater-than-bool2)
 
 ## Functions
 
