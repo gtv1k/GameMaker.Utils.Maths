@@ -59,7 +59,7 @@ function test_vec2_default_up()
 	v = up;
 	
 	assertEqual(0, v.x);
-	assertEqual(1, v.y);
+	assertEqual(-1, v.y);
 }
 
 function test_vec2_default_down()
@@ -67,7 +67,7 @@ function test_vec2_default_down()
 	v = down;
 	
 	assertEqual(0,  v.x);
-	assertEqual(-1, v.y);
+	assertEqual(1, v.y);
 }
 
 function test_vec2_default_left()

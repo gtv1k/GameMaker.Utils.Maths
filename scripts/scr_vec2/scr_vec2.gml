@@ -400,8 +400,8 @@ function vec2(x = 0, y) constructor
 #macro zero new vec2(0, 0);
 #macro one  new vec2(1, 1);
 
-#macro up    new vec2(0,  1);
-#macro down  new vec2(0, -1);
+#macro up    new vec2(0, -1);
+#macro down  new vec2(0,  1);
 #macro left  new vec2(-1, 0);
 #macro right new vec2( 1, 0);
 
