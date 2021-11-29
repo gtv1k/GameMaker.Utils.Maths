@@ -359,8 +359,8 @@ function vec2(x = 0, y) constructor
 	static Normalize=function()
 	{
 		var temp = self.Normalized();
-		self.x = temp;
-		self.y = temp
+		self.x = temp.x;
+		self.y = temp.y;
 		return self;
 	}
 	
