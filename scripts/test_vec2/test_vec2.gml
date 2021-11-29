@@ -622,4 +622,32 @@ function test_vec2_fn_Normalize()
 	assertEqual(vec_1.Length(), 1);
 }
 
+function test_vec2_fn_AsAngle()
+{
+	var vec_0 = right;
+	var ret_0 = vec_0.AsAngle();
+	
+	assertEqual(ret_0, 0);
+	
+	var vec_1 = up;
+	var ret_1 = vec_1.AsAngle();
+	
+	assertEqual(ret_1, 90);
+	
+	var vec_2 = left;
+	var ret_2 = vec_2.AsAngle();
+	
+	assertEqual(ret_2, -180);
+	
+	var vec_3 = down;
+	var ret_3 = vec_3.AsAngle();
+	
+	assertEqual(ret_3, -90);
+	
+	var vec_4 = new vec2(1, -1);
+	var ret_4 = vec_4.AsAngle();
+	
+	assertEqual(ret_4, 45);
+}
+
 #endregion
