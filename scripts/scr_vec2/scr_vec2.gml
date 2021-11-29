@@ -165,7 +165,7 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mul__(input);`
 	static __c_mul__=function(input)
 	{
-		var temp = self.__mul__(input);
+		var temp = (self).__mul__(input);
 		self.x = temp.x;
 		self.y = temp.y;
 		return self;
@@ -175,7 +175,7 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__div__(input);`
 	static __c_div__=function(input)
 	{
-		var temp = self.__div__(input);
+		var temp = (self).__div__(input);
 		self.x = temp.x;
 		self.y = temp.y;
 		return self;
@@ -186,7 +186,7 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__add__(input);`
 	static __c_add__=function(input)
 	{
-		var temp = self.__add__(input);
+		var temp = (self).__add__(input);
 		self.x = temp.x;
 		self.y = temp.y;
 		return self;
@@ -196,7 +196,7 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__sub__(input);`
 	static __c_sub__=function(input)
 	{
-		var temp = self.__sub__(input);
+		var temp = (self).__sub__(input);
 		self.x = temp.x;
 		self.y = temp.y;
 		return self;
@@ -207,7 +207,7 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mod__(input);`
 	static __c_mod__=function(input)
 	{
-		var temp = self.__mod__(input);
+		var temp = (self).__mod__(input);
 		self.x = temp.x;
 		self.y = temp.y;
 		return self;
@@ -358,7 +358,10 @@ function vec2(x = 0, y) constructor
 	
 	static Normalize=function()
 	{
-		return self = self.Normalized();
+		var temp = self.Normalized();
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	static Distance=function(input)
@@ -379,6 +382,22 @@ function vec2(x = 0, y) constructor
 		}
 	
 		throw ("Unexpected Argument!");
+	}
+	
+	static AsAngleDegrees=function()
+	{
+		//Normalize first.
+		var norm_vector = new vec2(self.x, self.y).Normalized();
+		
+		return radtodeg(-arctan2(norm_vector.y, norm_vector.x));
+	}
+	
+	static AsAngleRadians=function()
+	{
+		//Normalize first.
+		var norm_vector = new vec2(self.x, self.y).Normalized();
+		
+		return -arctan2(norm_vector.y, norm_vector.x);
 	}
 	
 	#endregion
@@ -433,5 +452,16 @@ function vec2(x = 0, y) constructor
 #macro vec2_down  new vec2(0, -1);
 #macro vec2_left  new vec2(-1, 0);
 #macro vec2_right new vec2( 1, 0);
+
+#endregion
+
+#region Functions
+
+function AngleDegreesToVec2(angle) //-> vec2
+{
+	var angleradians = degtorad(angle);
+	
+	return new vec2(cos(angleradians), -sin(angleradians));
+}
 
 #endregion
