@@ -678,5 +678,27 @@ function test_vec2_fn_AsAngleRadians()
 	assertEqual(ret_4, (pi/4));
 }
 
+function test_vec2_fn_AngleDegreesToVec2()
+{
+	var vec_0 = AngleDegreesToVec2(0);
+	
+	assertEqual(vec_0.x,  1);
+	assertEqual(vec_0.y,  0);
+	
+	var vec_1 = AngleDegreesToVec2(90);
+	
+	assertEqual(vec_1.x,  0);
+	assertEqual(vec_1.y, -1);
+	
+	var vec_2 = AngleDegreesToVec2(-180);
+	
+	assertEqual(vec_2.x, -1);
+	assertEqual(vec_2.y,  0);
+	
+	var vec_3 = AngleDegreesToVec2(-90);
+	
+	assertEqual(vec_3.x,  0);
+	assertEqual(vec_3.y,  1);
+}
 
 #endregion

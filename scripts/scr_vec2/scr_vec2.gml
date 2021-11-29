@@ -454,3 +454,14 @@ function vec2(x = 0, y) constructor
 #macro vec2_right new vec2( 1, 0);
 
 #endregion
+
+#region Functions
+
+function AngleDegreesToVec2(angle) //-> vec2
+{
+	var angleradians = degtorad(angle);
+	
+	return new vec2(cos(angleradians), -sin(angleradians));
+}
+
+#endregion
