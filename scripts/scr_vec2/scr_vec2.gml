@@ -165,14 +165,20 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mul__(input);`
 	static __c_mul__=function(input)
 	{
-		return self = self.__mul__(input);
+		var temp = self.__mul__(input);
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	//Compound Division
 	//Same result as `value = value.__div__(input);`
 	static __c_div__=function(input)
 	{
-		return self = self.__div__(input);
+		var temp = self.__div__(input);
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	
@@ -180,14 +186,20 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__add__(input);`
 	static __c_add__=function(input)
 	{
-		return self = self.__add__(input);
+		var temp = self.__add__(input);
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	//Compound Subtraction
 	//Same result as `value = value.__sub__(input);`
 	static __c_sub__=function(input)
 	{
-		return self = self.__sub__(input);
+		var temp = self.__sub__(input);
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	
@@ -195,7 +207,10 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mod__(input);`
 	static __c_mod__=function(input)
 	{
-		return self = self.__mod__(input);
+		var temp = self.__mod__(input);
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	
@@ -203,14 +218,20 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value._neg();`
 	static _c_neg=function()
 	{
-		return self = self.__neg__();
+		var temp = self._neg();
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	//Compound Absolute Value.
 	//Same result as `value = value._abs();`
 	static _c_abs=function()
 	{
-		return new vec2(abs(self.x), abs(self.y));
+		var temp = self._abs();
+		self.x = temp.x;
+		self.y = temp.y;
+		return self;
 	}
 	
 	#endregion
@@ -400,8 +421,8 @@ function vec2(x = 0, y) constructor
 #macro zero new vec2(0, 0);
 #macro one  new vec2(1, 1);
 
-#macro up    new vec2(0,  1);
-#macro down  new vec2(0, -1);
+#macro up    new vec2(0, -1);
+#macro down  new vec2(0,  1);
 #macro left  new vec2(-1, 0);
 #macro right new vec2( 1, 0);
 
