@@ -358,7 +358,10 @@ function vec2(x = 0, y) constructor
 	
 	static Normalize=function()
 	{
-		return self = self.Normalized();
+		var temp = self.Normalized();
+		self.x = temp;
+		self.y = temp
+		return self;
 	}
 	
 	static Distance=function(input)
