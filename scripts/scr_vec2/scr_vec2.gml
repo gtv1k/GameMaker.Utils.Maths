@@ -384,12 +384,20 @@ function vec2(x = 0, y) constructor
 		throw ("Unexpected Argument!");
 	}
 	
-	static AsAngle=function()
+	static AsAngleDegrees=function()
 	{
 		//Normalize first.
 		var norm_vector = new vec2(self.x, self.y).Normalized();
 		
 		return radtodeg(-arctan2(norm_vector.y, norm_vector.x));
+	}
+	
+	static AsAngleRadians=function()
+	{
+		//Normalize first.
+		var norm_vector = new vec2(self.x, self.y).Normalized();
+		
+		return -arctan2(norm_vector.y, norm_vector.x);
 	}
 	
 	#endregion

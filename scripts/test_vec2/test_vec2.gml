@@ -622,32 +622,61 @@ function test_vec2_fn_Normalize()
 	assertEqual(vec_1.Length(), 1);
 }
 
-function test_vec2_fn_AsAngle()
+function test_vec2_fn_AsAngleDegrees()
 {
 	var vec_0 = right;
-	var ret_0 = vec_0.AsAngle();
+	var ret_0 = vec_0.AsAngleDegrees();
 	
 	assertEqual(ret_0, 0);
 	
 	var vec_1 = up;
-	var ret_1 = vec_1.AsAngle();
+	var ret_1 = vec_1.AsAngleDegrees();
 	
 	assertEqual(ret_1, 90);
 	
 	var vec_2 = left;
-	var ret_2 = vec_2.AsAngle();
+	var ret_2 = vec_2.AsAngleDegrees();
 	
 	assertEqual(ret_2, -180);
 	
 	var vec_3 = down;
-	var ret_3 = vec_3.AsAngle();
+	var ret_3 = vec_3.AsAngleDegrees();
 	
 	assertEqual(ret_3, -90);
 	
 	var vec_4 = new vec2(1, -1);
-	var ret_4 = vec_4.AsAngle();
+	var ret_4 = vec_4.AsAngleDegrees();
 	
 	assertEqual(ret_4, 45);
 }
+
+function test_vec2_fn_AsAngleRadians()
+{
+	var vec_0 = right;
+	var ret_0 = vec_0.AsAngleRadians();
+	
+	assertEqual(ret_0, 0);
+	
+	var vec_1 = up;
+	var ret_1 = vec_1.AsAngleRadians();
+	
+	assertEqual(ret_1, pi/2);
+	
+	var vec_2 = left;
+	var ret_2 = vec_2.AsAngleRadians();
+	
+	assertEqual(ret_2, -pi);
+	
+	var vec_3 = down;
+	var ret_3 = vec_3.AsAngleRadians();
+	
+	assertEqual(ret_3, -(pi/2));
+	
+	var vec_4 = new vec2(1, -1);
+	var ret_4 = vec_4.AsAngleRadians();
+	
+	assertEqual(ret_4, (pi/4));
+}
+
 
 #endregion
