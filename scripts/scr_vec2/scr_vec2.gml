@@ -405,29 +405,19 @@ function vec2(x = 0, y) constructor
 
 #region Aliases
 
-/*
-#macro Vector    vec2;
-#macro Position  vec2;
-#macro Direction vec2;
-
-#macro Vec vec2;
-#macro Pos vec2;
-#macro Dir vec2;
-*/
-
 #region	Operators/Functions
 
-#macro __equals__     __eq__;
-#macro __not_equals__ __ne__;
+#macro __equals__     __eq__
+#macro __not_equals__ __ne__
 	
-#macro __lt_or_eq__ __le__;
-#macro __gt_or_eq__ __ge__;
+#macro __lt_or_eq__ __le__
+#macro __gt_or_eq__ __ge__
 	
-#macro __less_or_equals__    __le__;
-#macro __greater_or_equals__ __ge__;
+#macro __less_or_equals__    __le__
+#macro __greater_or_equals__ __ge__
 	
-#macro __less_than_or_equal_to__    __le__;
-#macro __greater_than_or_equal_to__ __ge__;
+#macro __less_than_or_equal_to__    __le__
+#macro __greater_than_or_equal_to__ __ge__
 
 #endregion
 
@@ -437,21 +427,21 @@ function vec2(x = 0, y) constructor
 
 //I couldn't figure out constants
 
-#macro zero new vec2(0, 0);
-#macro one  new vec2(1, 1);
+#macro zero new vec2(0, 0)
+#macro one  new vec2(1, 1)
 
-#macro up    new vec2(0, -1);
-#macro down  new vec2(0,  1);
-#macro left  new vec2(-1, 0);
-#macro right new vec2( 1, 0);
+#macro up    new vec2(0, -1)
+#macro down  new vec2(0,  1)
+#macro left  new vec2(-1, 0)
+#macro right new vec2( 1, 0)
 
-#macro vec2_zero new vec2(0, 0);
-#macro vec2_one  new vec2(1, 1);
+#macro vec2_zero new vec2(0, 0)
+#macro vec2_one  new vec2(1, 1)
 
-#macro vec2_up    new vec2(0,  1);
-#macro vec2_down  new vec2(0, -1);
-#macro vec2_left  new vec2(-1, 0);
-#macro vec2_right new vec2( 1, 0);
+#macro vec2_up    new vec2(0,  1)
+#macro vec2_down  new vec2(0, -1)
+#macro vec2_left  new vec2(-1, 0)
+#macro vec2_right new vec2( 1, 0)
 
 #endregion
 
