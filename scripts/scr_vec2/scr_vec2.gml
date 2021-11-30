@@ -36,18 +36,26 @@ function vec2(x = 0, y) constructor
 	
 	static xy=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(x, y);
 	}
 	static yx=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(y, x);
 	}
 	static xx=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(x, x);
 	}
 	static yy=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(y, y);
 	}
 	
@@ -60,6 +68,8 @@ function vec2(x = 0, y) constructor
 	//Multiplication
 	static __mul__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new vec2((self.x * input.x), (self.y * input.y));
@@ -75,6 +85,8 @@ function vec2(x = 0, y) constructor
 	//Division
 	static __div__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new vec2((self.x / input.x), (self.y / input.y));
@@ -91,6 +103,8 @@ function vec2(x = 0, y) constructor
 	//Addition
 	static __add__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new vec2((self.x + input.x), (self.y + input.y));
@@ -106,6 +120,8 @@ function vec2(x = 0, y) constructor
 	//Subtraction
 	static __sub__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new vec2((self.x - input.x), (self.y - input.y));
@@ -122,6 +138,8 @@ function vec2(x = 0, y) constructor
 	//Remainder
 	static __mod__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new vec2((self.x % input.x), (self.y % input.y));
@@ -137,6 +155,8 @@ function vec2(x = 0, y) constructor
 	//Dot Product
 	static __dot__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return (self.x * input.x) + (self.y * input.y);
@@ -148,12 +168,16 @@ function vec2(x = 0, y) constructor
 	//Negation
 	static _neg=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(-self.x, -self.y);
 	}
 	
 	//Absolute Value, makes every axis a positive number. -5 becomes 5, 4 stays 4
 	static _abs=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(abs(self.x), abs(self.y));
 	}
 	
@@ -165,6 +189,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mul__(input);`
 	static __c_mul__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		var temp = (self).__mul__(input);
 		self.x = temp.x;
 		self.y = temp.y;
@@ -175,6 +201,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__div__(input);`
 	static __c_div__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		var temp = (self).__div__(input);
 		self.x = temp.x;
 		self.y = temp.y;
@@ -186,6 +214,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__add__(input);`
 	static __c_add__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		var temp = (self).__add__(input);
 		self.x = temp.x;
 		self.y = temp.y;
@@ -196,6 +226,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__sub__(input);`
 	static __c_sub__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		var temp = (self).__sub__(input);
 		self.x = temp.x;
 		self.y = temp.y;
@@ -207,6 +239,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value.__mod__(input);`
 	static __c_mod__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		var temp = (self).__mod__(input);
 		self.x = temp.x;
 		self.y = temp.y;
@@ -218,6 +252,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value._neg();`
 	static _c_neg=function()
 	{
+		gml_pragma("forceinline");
+		
 		var temp = self._neg();
 		self.x = temp.x;
 		self.y = temp.y;
@@ -228,6 +264,8 @@ function vec2(x = 0, y) constructor
 	//Same result as `value = value._abs();`
 	static _c_abs=function()
 	{
+		gml_pragma("forceinline");
+		
 		var temp = self._abs();
 		self.x = temp.x;
 		self.y = temp.y;
@@ -241,6 +279,8 @@ function vec2(x = 0, y) constructor
 	//Is Equal To
 	static __eq__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x == input.x), (self.y == input.y));
@@ -256,6 +296,8 @@ function vec2(x = 0, y) constructor
 	//Is Not Equal To
 	static __ne__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x != input.x), (self.y != input.y));
@@ -272,6 +314,8 @@ function vec2(x = 0, y) constructor
 	//Is Less Than
 	static __lt__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x < input.x), (self.y < input.y));
@@ -287,6 +331,8 @@ function vec2(x = 0, y) constructor
 	//Is Greather Than
 	static __gt__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x > input.x), (self.y > input.y));
@@ -303,6 +349,8 @@ function vec2(x = 0, y) constructor
 	//Is Less Than Or Equal To
 	static __le__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x <= input.x), (self.y <= input.y));
@@ -318,6 +366,8 @@ function vec2(x = 0, y) constructor
 	//Is Greather Than Or Equal To
 	static __ge__=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return new bool2((self.x >= input.x), (self.y >= input.y));
@@ -338,26 +388,36 @@ function vec2(x = 0, y) constructor
 	
 	static Length=function()
 	{
+		gml_pragma("forceinline");
+		
 		return sqrt(LengthSquared());
 	}
 	
 	static LengthSquared=function()
 	{
+		gml_pragma("forceinline");
+		
 		return (self).__dot__(self);
 	}
 	
 	static Sqrt=function()
 	{
+		gml_pragma("forceinline");
+		
 		return new vec2(sqrt(self.x), sqrt(self.y));
 	}
 	
 	static Normalized=function()
 	{
+		gml_pragma("forceinline");
+		
 		return (self).__mul__(1 / Length());
 	}
 	
 	static Normalize=function()
 	{
+		gml_pragma("forceinline");
+		
 		var temp = self.Normalized();
 		self.x = temp.x;
 		self.y = temp.y;
@@ -366,6 +426,8 @@ function vec2(x = 0, y) constructor
 	
 	static Distance=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return ((input).__sub__(self)).Length();
@@ -376,6 +438,8 @@ function vec2(x = 0, y) constructor
 	
 	static DistanceSquared=function(input)
 	{
+		gml_pragma("forceinline");
+		
 		if is_struct(input) //is vec2
 		{
 			return ((input).__sub__(self)).LengthSquared();
@@ -386,6 +450,8 @@ function vec2(x = 0, y) constructor
 	
 	static AsAngleDegrees=function()
 	{
+		gml_pragma("forceinline");
+		
 		//Normalize first.
 		var norm_vector = new vec2(self.x, self.y).Normalized();
 		
@@ -394,6 +460,8 @@ function vec2(x = 0, y) constructor
 	
 	static AsAngleRadians=function()
 	{
+		gml_pragma("forceinline");
+		
 		//Normalize first.
 		var norm_vector = new vec2(self.x, self.y).Normalized();
 		
