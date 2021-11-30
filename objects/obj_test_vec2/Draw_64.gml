@@ -5,10 +5,17 @@ results_box.draw(colors.background, false);
 // Draw test results
 var _h_total = 0;
 var _len = ds_list_size(results);
-if _len {
+if _len 
+{
 	draw_set_color(colors.foreground);
-	for(var i = 0; i < _len; i++) {
+	
+	for(var i = 0; i < _len; i++) 
+	{
 		var _text = results[| i];
+		
+		_text = string_replace(_text, "test_", "");
+		_text = string_replace(_text, ".TestCase", "");
+		//_text -= "";
 		// var _h = string_height(_text);
 		// _h_total += _h;
 		var _h = (i + 1) * text_height;
