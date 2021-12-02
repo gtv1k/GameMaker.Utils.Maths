@@ -191,10 +191,20 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = (self).__mul__(input);
-		self.x = temp.x;
-		self.y = temp.y;
-		return self;
+		if is_struct(input) //is vec2
+		{
+			self.x *= input.x;
+			self.y *= input.y;
+			return self;
+		}
+		if is_numeric(input)
+		{	
+			self.x *= input;
+			self.y *= input;
+			return self;
+		}
+	
+		throw ("Unexpected Argument!");
 	}
 	
 	//Compound Division
@@ -203,10 +213,20 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = (self).__div__(input);
-		self.x = temp.x;
-		self.y = temp.y;
-		return self;
+		if is_struct(input) //is vec2
+		{
+			self.x /= input.x;
+			self.y /= input.y;
+			return self;
+		}
+		if is_numeric(input)
+		{	
+			self.x /= input;
+			self.y /= input;
+			return self;
+		}
+	
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -216,10 +236,20 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = (self).__add__(input);
-		self.x = temp.x;
-		self.y = temp.y;
-		return self;
+		if is_struct(input) //is vec2
+		{
+			self.x += input.x;
+			self.y += input.y;
+			return self;
+		}
+		if is_numeric(input)
+		{	
+			self.x += input;
+			self.y += input;
+			return self;
+		}
+	
+		throw ("Unexpected Argument!");
 	}
 	
 	//Compound Subtraction
@@ -228,10 +258,20 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = (self).__sub__(input);
-		self.x = temp.x;
-		self.y = temp.y;
-		return self;
+		if is_struct(input) //is vec2
+		{
+			self.x -= input.x;
+			self.y -= input.y;
+			return self;
+		}
+		if is_numeric(input)
+		{	
+			self.x -= input;
+			self.y -= input;
+			return self;
+		}
+	
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -241,10 +281,20 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = (self).__mod__(input);
-		self.x = temp.x;
-		self.y = temp.y;
-		return self;
+		if is_struct(input) //is vec2
+		{
+			self.x %= input.x;
+			self.y %= input.y;
+			return self;
+		}
+		if is_numeric(input)
+		{	
+			self.x %= input;
+			self.y %= input;
+			return self;
+		}
+	
+		throw ("Unexpected Argument!");
 	}
 	
 	
@@ -254,9 +304,8 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = self._neg();
-		self.x = temp.x;
-		self.y = temp.y;
+		self.x = -self.x;
+		self.y = -self.y;
 		return self;
 	}
 	
@@ -266,9 +315,8 @@ function vec2(x = 0, y) constructor
 	{
 		gml_pragma("forceinline");
 		
-		var temp = self._abs();
-		self.x = temp.x;
-		self.y = temp.y;
+		self.x = abs(self.x);
+		self.y = abs(self.y);
 		return self;
 	}
 	
